@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-viper</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>protocol &lt;#view#&gt;: class {
+    
+ }
+ 
+ protocol &lt;#usecase#&gt;: class {
+    
+ }
+ 
+ class &lt;#interactor#&gt;: &lt;#usecase#&gt; {
+    
+ }
+ 
+ protocol &lt;#wireframe#&gt;: class, BaseWireframe {
+    
+ }
+ 
+ class &lt;#router#&gt;: BaseWireframe, &lt;#wireframe#&gt; {
+    
+ }
+ 
+ protocol &lt;#presentation#&gt;: class {
+    
+    weak var view: &lt;#view#&gt;? {get}
+    var router: &lt;#wireframe#&gt;? {get}
+    var interactor: &lt;#usecase#&gt;? {get}
+ }
+ 
+ class &lt;#presenter#&gt;: &lt;#presentation#&gt; {
+    
+    weak var view: &lt;#view#&gt;?
+    var router: &lt;#wireframe#&gt;?
+    var interactor: &lt;#usecase#&gt;?
+ }
+ 
+ protocol &lt;#modulebuilder#&gt;: ModuleBuilder {
+    
+ }
+ 
+ extension &lt;#modulebuilder#&gt; {
+    
+    static func assembleModule(data: String) -&gt; UIViewController? {
+        return nil
+    }
+ }
+ 
+ class &lt;#builder#&gt;: &lt;#modulebuilder#&gt; {
+    
+    static func assembleModule() -&gt; UIViewController? {
+        
+        let view = &lt;#viewcontroller#&gt;
+        let presenter = &lt;#presenter#&gt;()
+        let interactor = &lt;#interactor#&gt;()
+        let router = &lt;#router#&gt;()
+        
+        view?.presenter = presenter
+        
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = router
+        
+        router.viewController = view
+        
+        return view
+    }
+ }
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8182522F-A7EC-4ED8-B360-6D53EC2D25D6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>viper</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
