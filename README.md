@@ -1,4 +1,4 @@
-##### LEIA ESSA BODEGA
+### LEIA ESSA BODEGA
 
 # Como usar este repositório:
 1. Vá para o Xcode
