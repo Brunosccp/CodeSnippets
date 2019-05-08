@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-AlamofireSimpleJsonRequest</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>Alamofire.request(&lt;#url#&gt;).responseJSON{ response in
+            guard let status = response.response?.statusCode else{
+                print("ERROR: Could not get response")
+                return
+            }
+            
+            switch(status){
+            //put cases from status code return
+            default:
+                print("ERROR: Unknown status error")
+                return
+            }
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1FAAE158-78E8-48C7-8DB2-05CC0DCFA4E2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Function to make a request without parameters in body (needs Alamofire framework)</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Alamofire Simple JSON Request</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

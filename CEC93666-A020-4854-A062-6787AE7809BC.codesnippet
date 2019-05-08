@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-ClosureFunction</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    func (&lt;#ParameterName#&gt;: &lt;#ParameterType#&gt;, completion: @escaping(_ returnParameter: &lt;#ReturnType#&gt;) -&gt; Void){
+        
+        completion(&lt;#return#&gt;)
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CEC93666-A020-4854-A062-6787AE7809BC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>A closure function with completion</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Closure Function </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift - FirebaseObserveSingle</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>&lt;#databaseReference#&gt;.observeSingleEvent(of: .value, with: {snapshot in
+            guard let value = snapshot.value as? NSDictionary else{
+                completion(nil)
+                return
+            }
+            
+            
+            let result = value as! [String : Any]
+            
+    let completeName = result["&lt;#Data Name#&gt;"] as? &lt;#Data Type#&gt;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A2628955-7875-4E0E-B2A0-FF796759095A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>A sentence that returns the firebase data, and convert the snapshot into a dictionary</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Firebase Observe Single</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

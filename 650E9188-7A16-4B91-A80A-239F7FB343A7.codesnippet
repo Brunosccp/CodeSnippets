@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-ImageFromUrl</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension UIImageView {
+    public func imageFromURL(urlString: String) {
+        
+        let activityIndicator = UIActivityIndicatorView(style: .gray)
+        activityIndicator.frame = CGRect.init(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+        activityIndicator.startAnimating()
+        if self.image == nil{
+            self.addSubview(activityIndicator)
+        }
+        
+        URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -&gt; Void in
+            
+            if error != nil {
+                print(error ?? "No Error")
+                return
+            }
+            DispatchQueue.main.async(execute: { () -&gt; Void in
+                let image = UIImage(data: data!)
+                activityIndicator.removeFromSuperview()
+                self.image = image
+            })
+        }).resume()
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>650E9188-7A16-4B91-A80A-239F7FB343A7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>A function that loads the image asynchronously</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Image From URL</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

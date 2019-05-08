@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-CoreDataModelContext</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        //Needs a xcdatamodel with the model
+        &lt;#variable#&gt; = &lt;#DataModel#&gt;(context: &lt;#context#&gt;&lt;##&gt;)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3EBB1ADB-92D7-4B7D-8F81-E8FCA4C20278</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Gets the context from the xcdatamodel</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>CoreData Model Context</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

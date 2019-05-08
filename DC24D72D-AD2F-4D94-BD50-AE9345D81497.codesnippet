@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-ImageToCoreData</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    func deleteSavedEvent(id: String){
+        let deleteFetch = NSFetchRequest&lt;NSFetchRequestResult&gt;(entityName: "&lt;#entityName#&gt;")//must have the entity name in xcdatamodel
+        
+        deleteFetch.predicate = NSPredicate(format: "&lt;#attributeName#&gt; == %@", id)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        do{
+            try context.execute(deleteRequest)
+            try context.save()
+        }
+        catch{
+            print("ERROR: To delete event")
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DC24D72D-AD2F-4D94-BD50-AE9345D81497</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Transforms the image in data and saves in CoreData</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>CoreData Image Save</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

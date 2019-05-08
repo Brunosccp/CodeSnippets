@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swift-CoreDataDeleteDataWithCondition</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func deleteSavedEvent(&lt;#condition#&gt;: &lt;#ConditionType#&gt;){
+        let deleteFetch = NSFetchRequest&lt;NSFetchRequestResult&gt;(entityName: "&lt;#entityName#&gt;")//must have the entity name in xcdatamodel
+        
+        deleteFetch.predicate = NSPredicate(format: "&lt;#attributeName#&gt; == %@", &lt;#condition#&gt;)//must have the attribute name in xcdatamodel
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        do{
+            try &lt;#context#&gt;.execute(deleteRequest)
+            try &lt;#context#&gt;.save()
+        }
+        catch{
+            print("ERROR: To delete event")
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4AD14C15-1D7C-4857-B4AF-8FF9CDDFE7BD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>A function that delete datas with a fetchRequest using conditional attributes</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>CoreData Delete Data With Condition</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
